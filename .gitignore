@@ -134,3 +134,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Codex scratch artifacts
+.tmp-*.png
+.lighthouse-home/
+.lighthouse-booking/
