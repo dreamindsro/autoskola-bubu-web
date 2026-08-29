@@ -64,4 +64,6 @@ Serverové metadata, canonicaly, Open Graph, JSON-LD `DrivingSchool` a `Course`,
 
 ## Testovací minimum
 
-CI vyžaduje čisté formátování, lint bez warningů, strict typecheck, Vitest coverage alespoň 80 % statements/functions/lines a 75 % branches a produkční build. Browser smoke pokrývá desktop, mobilní navigaci, CTA, query předvýběr, chyby, testovací odeslání a děkovací stav.
+CI vyžaduje průchod `npm run verify`: čisté formátování, lint bez warningů, strict typecheck, Vitest coverage alespoň 80 % statements/functions/lines a 75 % branches, architektonický guard, produkční build a kontrolu předgenerovaného HTML a SEO metadat. Samostatný job sestavuje Docker image. Browser smoke pokrývá desktop, mobilní navigaci, CTA, query předvýběr, chyby, testovací odeslání a děkovací stav.
+
+Pravidla změn, Definition of Done a doporučený GitHub branch ruleset jsou v `AGENTS.md`, `QUALITY-GATES.md` a `CONTRIBUTING.md`. Tyto dokumenty jsou součástí technického kontraktu projektu.

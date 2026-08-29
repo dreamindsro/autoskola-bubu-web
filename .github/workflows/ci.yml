@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -18,14 +23,11 @@ jobs:
         with:
           node-version: 24
           cache: npm
-      - run: npm ci
-      - run: npm run format:check
-      - run: npm run lint
-      - run: npm run typecheck
-      - run: npm run coverage
-      - run: npm run build
+      - run: npm ci --no-audit --no-fund
+      - run: npm run verify
 
   docker:
+    needs: quality
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:

@@ -2,6 +2,8 @@
 
 Veřejný web Autoškoly BuBu pro Střížkov, Kladno a Statenice. Projekt převádí původní statický web do Next.js 16 App Routeru bez změny jeho veřejného vizuálního směru: zachovává značku, Montserrat, tyrkysovou/modrou paletu, původní fotografie, strukturu hlavních marketingových stránek, hlavičku, patičku a mobilní CTA.
 
+> **Přebíráte projekt a nejste vývojář?** Začněte dokumentem [`START-HERE.md`](START-HERE.md). Závazná technická pravidla jsou v [`AGENTS.md`](AGENTS.md), význam automatických kontrol v [`QUALITY-GATES.md`](QUALITY-GATES.md) a workflow příspěvků v [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
 ## Rozsah
 
 - homepage, kurzy, ceník, průběh výuky, pobočky, kontakt, o nás a SEO články;
@@ -45,14 +47,10 @@ Endpoint kontroluje origin, typ a velikost payloadu, Zod schéma, honeypot, mini
 ## Kontroly
 
 ```bash
-npm run format:check
-npm run lint
-npm run typecheck
-npm run coverage
-npm run build
+npm run verify
 ```
 
-CI provádí všechny uvedené kontroly a samostatně ověřuje sestavení produkčního Docker image. Produkční Next build má `output: "standalone"`.
+Příkaz kontroluje formátování, lint, strict TypeScript, unit testy a coverage, architektonické invarianty, produkční build i předgenerované HTML a SEO metadata. CI spouští stejný příkaz a samostatně ověřuje sestavení produkčního Docker image. Produkční Next build má `output: "standalone"`.
 
 ## Nasazení na Coolify
 

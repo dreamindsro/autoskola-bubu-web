@@ -14,7 +14,12 @@
     "lint": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "coverage": "vitest run --coverage"
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "guard:architecture": "node scripts/verify-architecture.mjs",
+    "guard:rendering": "node scripts/verify-rendering.mjs",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run coverage && npm run guard:architecture",
+    "verify": "npm run check && npm run build && npm run guard:rendering"
   },
   "dependencies": {
     "@fontsource-variable/montserrat": "5.3.0",
