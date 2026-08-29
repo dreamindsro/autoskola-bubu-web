@@ -2,7 +2,7 @@
 
 Veřejný web Autoškoly BuBu pro Střížkov, Kladno a Statenice. Projekt převádí původní statický web do Next.js 16 App Routeru bez změny jeho veřejného vizuálního směru: zachovává značku, Montserrat, tyrkysovou/modrou paletu, původní fotografie, strukturu hlavních marketingových stránek, hlavičku, patičku a mobilní CTA.
 
-> **Přebíráte projekt a nejste vývojář?** Začněte dokumentem [`START-HERE.md`](START-HERE.md). Závazná technická pravidla jsou v [`AGENTS.md`](AGENTS.md), význam automatických kontrol v [`QUALITY-GATES.md`](QUALITY-GATES.md) a workflow příspěvků v [`CONTRIBUTING.md`](CONTRIBUTING.md).
+> **Přebíráte projekt a nejste vývojář?** Začněte dokumentem [`START-HERE.md`](START-HERE.md). Závazná technická pravidla jsou v [`AGENTS.md`](AGENTS.md), význam automatických kontrol v [`QUALITY-GATES.md`](QUALITY-GATES.md) a workflow příspěvků v [`CONTRIBUTING.md`](CONTRIBUTING.md). AI nástroje mohou jako rozcestník použít [`llms.md`](llms.md).
 
 ## Rozsah
 
